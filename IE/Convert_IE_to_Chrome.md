@@ -38,6 +38,22 @@ chrome 必須設定 `id`
 
 ```
 
+## funcion 名稱 不可以與 元素 `id` 相同
+
+當 funcion 名稱 與 元素名稱相同時 瀏覽器會找不到 funcion
+
+```html
+
+<input type='button' id='QueryTax' value='取財稅資料(T)' accessKey='T' onClick='QueryTax()'><BR />
+
+<script type="text/javascript">
+    function QueryTax(){
+        ....
+    }
+</script>
+
+```
+
 ## IE 獨有
 
 `document.all`
