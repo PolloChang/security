@@ -50,4 +50,37 @@ chrome 必須設定 `id`
 let objs = document.getElementsByTagName('input');
 ```
 
+## <col style="display:none" > 標籤
+
+<col style="display:none" > 在 IE 少可以將 標注欄位不顯示，但是在 Chrome 不可以
+
+```html
+<table>
+    <colgroup>
+        <col width="30" align="center">
+        
+        <col style="display:none" width="270" align="center">
+        
+        <col width="85" align="center">
+    </colgroup>
+</table>
+```
+
+### 解決方式
+
+```html
+<style type="text/css">
+    #grdBltList2 tr td:nth-child(2){
+        display: none;
+    }
+    #grdBltList2 tr th:nth-child(2){
+        display: none;
+    }
+</style>
+```
+
+## 參考資料
+
+[为什么在<col style="display:none">不起作用](https://zhidao.baidu.com/question/1174360040437688979.html)
+
 [IE、FF、Chrome瀏覽器中的JS差異介紹](https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/289453/)
