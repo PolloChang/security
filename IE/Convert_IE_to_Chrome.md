@@ -95,6 +95,39 @@ let objs = document.getElementsByTagName('input');
 </style>
 ```
 
+## Date().getYear()
+
+```javascript
+var df = new Date();
+df.getYear();
+
+// IE: >> 當下西元年 : 2022
+// Chrome >> 122
+
+```
+
+### 解決方式
+
+* getFullYear
+
+```javascript
+var df = new Date();
+df.getFullYear();
+```
+
+## parent.navigate 更改 瀏覽器的網址列
+
+```javascript
+parent.navigate(yourUrl);
+```
+
+
+### 解決方式
+
+```javascript
+parent.location.href = yourUrl;
+```
+
 ## 參考資料
 
 [为什么在<col style="display:none">不起作用](https://zhidao.baidu.com/question/1174360040437688979.html)
