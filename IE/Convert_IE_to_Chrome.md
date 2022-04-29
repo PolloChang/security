@@ -54,7 +54,7 @@ chrome 必須設定 `id`
 
 ```
 
-## IE 獨有
+## 各瀏覽器中的支援不同
 
 `document.all`
 
@@ -63,8 +63,14 @@ chrome 必須設定 `id`
 * 替代方式
 
 ```javascript
-let objs = document.getElementsByTagName('input');
+let objs = document.getElementsByTagName('*');
 ```
+
+[document.all 在各瀏覽器中的支援不同](https://www.796t.com/content/1546462261.html)
+
+[[筆記] 使用標準 HTML DOM 物件取代 document.all 集合](https://jumping-fun.blogspot.com/2013/12/html-dom-instead-of-document.all.html)
+
+## IE 獨有
 
 ## <col style="display:none" > 標籤
 
@@ -127,6 +133,8 @@ parent.navigate(yourUrl);
 ```javascript
 parent.location.href = yourUrl;
 ```
+
+## 
 
 ## 參考資料
 
