@@ -134,7 +134,49 @@ parent.navigate(yourUrl);
 parent.location.href = yourUrl;
 ```
 
-## 
+## chrome 找不到元素的問題 IE 可以找到元素
+
+IE 可以透過 Name 取得 element 元素，但是 Chrome 只能透過 ID 取得元素
+
+```html
+<input type="hidden" name="txt1" id="txt2" value="test1">
+<script>
+    var value1 = txt1.value();
+</script>
+```
+
+上述程式碼在 chrome 中是無法取得值。
+
+## radio 
+
+IE 可以透過 Name 取得 element 元素，但是 Chrome 只能透過 ID 取得元素
+
+```html
+<input type="radio" name="radioName" id="radio1">
+<input type="radio" name="radioName" id="radio2">
+<input type="radio" name="radioName" id="radio3">
+
+<script>
+    console.log(radioName[0].checked); //true or false
+</script>
+```
+
+### 解決方式
+
+```html
+<input type="radio" name="radioName" id="radio1">
+<input type="radio" name="radioName" id="radio2">
+<input type="radio" name="radioName" id="radio3">
+
+<script>
+    var radioName = document.getElementsByName("radioName"); // 新增此行
+
+    console.log(radioName[0].checked); //true or false
+
+</script>
+```
+
+
 
 ## 參考資料
 
