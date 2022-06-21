@@ -2,6 +2,8 @@
 
 ## IE 可以用name 取值
 
+IE 可以透過 Name 取得 element 元素，但是 Chrome 只能透過 ID 取得元素
+
 ```html
 <input name="test" vvalue="val1">
 
