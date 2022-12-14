@@ -69,7 +69,7 @@ IE 可以透過 Name 取得 element 元素，但是 Chrome 只能透過 ID 取�
 
 ```
 
-## funcion 名稱 不可以與 元素 `id` 相同
+## funcion 名稱 不可以與 元素 `id` `name` 相同
 
 當 funcion 名稱 與 元素名稱相同時 瀏覽器會找不到 funcion
 
